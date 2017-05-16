@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="shujucn" />
+  <meta name="keywords" content="NSUserDefaults," />
 
 
 
@@ -94,16 +94,17 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="NSUserDefaults官方文档NSUserDefaultsNSUserDefaults 是iOS Foundation 框架提供的一种用于存储管理单例。 Tip 1：支持存储的类型 NSArray NSData NSDictionary NSNumber NSString  通过NSData可以存储大部分类型的文件，例如要存储一张图片可以先把图片转为NSData。 // Create ins">
+<meta name="keywords" content="NSUserDefaults">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/05/15/hello-world/index.html">
+<meta property="og:title" content="NSUserDefaults使用">
+<meta property="og:url" content="http://yoursite.com/2016/08/16/NSUser​Defaults/index.html">
 <meta property="og:site_name" content="shujucn">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2017-05-15T08:34:17.000Z">
+<meta property="og:description" content="NSUserDefaults官方文档NSUserDefaultsNSUserDefaults 是iOS Foundation 框架提供的一种用于存储管理单例。 Tip 1：支持存储的类型 NSArray NSData NSDictionary NSNumber NSString  通过NSData可以存储大部分类型的文件，例如要存储一张图片可以先把图片转为NSData。 // Create ins">
+<meta property="og:updated_time" content="2017-05-16T10:32:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="NSUserDefaults使用">
+<meta name="twitter:description" content="NSUserDefaults官方文档NSUserDefaultsNSUserDefaults 是iOS Foundation 框架提供的一种用于存储管理单例。 Tip 1：支持存储的类型 NSArray NSData NSDictionary NSNumber NSString  通过NSData可以存储大部分类型的文件，例如要存储一张图片可以先把图片转为NSData。 // Create ins">
 
 
 
@@ -131,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/15/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/08/16/NSUser​Defaults/"/>
 
 
 
 
 
-  <title>Hello World | shujucn</title>
+  <title>NSUserDefaults使用 | shujucn</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -304,7 +305,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/15/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/16/NSUser​Defaults/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="shujucn">
@@ -321,7 +322,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Hello World</h2>
+          <h2 class="post-title" itemprop="name headline">NSUserDefaults使用</h2>
         
 
         <div class="post-meta">
@@ -333,8 +334,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-15T16:34:17+08:00">
-                2017-05-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-08-16T18:19:10+08:00">
+                2016-08-16
               </time>
             
 
@@ -368,15 +369,53 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h3 id="NSUserDefaults官方文档"><a href="#NSUserDefaults官方文档" class="headerlink" title="NSUserDefaults官方文档"></a><a href="https://developer.apple.com/reference/foundation/userdefaults" target="_blank" rel="external">NSUserDefaults官方文档</a></h3><h2 id="NSUserDefaults"><a href="#NSUserDefaults" class="headerlink" title="NSUserDefaults"></a>NSUserDefaults</h2><p>NSUserDefaults 是iOS Foundation 框架提供的一种用于存储管理单例。</p>
+<h3 id="Tip-1：支持存储的类型"><a href="#Tip-1：支持存储的类型" class="headerlink" title="Tip 1：支持存储的类型"></a>Tip 1：支持存储的类型</h3><ul>
+<li>NSArray</li>
+<li>NSData</li>
+<li>NSDictionary</li>
+<li>NSNumber</li>
+<li>NSString</li>
+</ul>
+<p>通过NSData可以存储大部分类型的文件，例如要存储一张图片可以先把图片转为NSData。</p>
+<pre><code>// Create instances of NSData
+NSData *imageData = UIImageJPEGRepresentation(contactImage, 100);
+// Store the data
+NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+[defaults setObject:imageData forKey:@&quot;image&quot;];
+</code></pre><h3 id="Tip-2-存储使用方法"><a href="#Tip-2-存储使用方法" class="headerlink" title="Tip 2: 存储使用方法"></a>Tip 2: 存储使用方法</h3><pre><code>NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+[defaults setInteger:9001 forKey:@&quot;HighScore&quot;];
+[defaults synchronize];
+</code></pre><h3 id="Tip-3-获取存储的data"><a href="#Tip-3-获取存储的data" class="headerlink" title="Tip 3: 获取存储的data"></a>Tip 3: 获取存储的data</h3><pre><code>// Get the stored data before the view loads
+NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+NSData *imageData = [defaults dataForKey:@&quot;image&quot;];
+UIImage *contactImage = [UIImage imageWithData:imageData];
+</code></pre><h3 id="Tip-4-对于常见的值类型，如Bool，Float，Integer-等可以使用系统提供的一些方法来存储不同类型值。"><a href="#Tip-4-对于常见的值类型，如Bool，Float，Integer-等可以使用系统提供的一些方法来存储不同类型值。" class="headerlink" title="Tip 4: 对于常见的值类型，如Bool，Float，Integer 等可以使用系统提供的一些方法来存储不同类型值。"></a>Tip 4: 对于常见的值类型，如Bool，Float，Integer 等可以使用系统提供的一些方法来存储不同类型值。</h3><pre><code>- setBool:forKey:
+- setFloat:forKey:
+- setInteger:forKey:
+- setDouble:forKey:
+- setURL:forKey:
+</code></pre><p>对于存储Bool类型值，取值的时候需要注意使用Bool变量来接住，而不是直接判断对[[NSUserDefaults standardUserDefaults] boolForKey:]，直接判断表示[NSUserDefaults standardUserDefaults] 是否能取到对应的Key值，YES表示has value，NO表示no value。</p>
+<pre><code>[[NSUserDefaults standardUserDefaults] setBool:YES forKey:APP_IS_FIRST_SESSION_ID];
+BOOL flag = [[NSUserDefaults standardUserDefaults] boolForKey:APP_IS_FIRST_SESSION_ID];
+//这里的Flag为YES
+if ([[NSUserDefaults standardUserDefaults] boolForKey:APP_IS_FIRST_SESSION_ID]) {
+ //直接对取值判断，将总是True，这个代表[NSUserDefaults standardUserDefaults]能取到值
+}
+</code></pre><h3 id="Tip-5-NSUserDefaults域"><a href="#Tip-5-NSUserDefaults域" class="headerlink" title="Tip 5: NSUserDefaults域"></a>Tip 5: NSUserDefaults域</h3><p>user defaults数据库中其实是由多个层级的域组成的，当你读取一个键值的数据时，NSUserDefaults从上到下透过域的层级寻找正确的值，不同的域有不同的功能，有些域是可持久的，有些域则不行。</p>
+<ul>
+<li>应用域（application domain）是最重要的域，它存储着你app通过NSUserDefaults<br>set…forKey添加的设置。</li>
+<li>注册域（registration domain）仅有较低的优先权，只有在应用域没有找到值时才从注册域去寻找。</li>
+<li>全局域（global domain）则存储着系统的设置</li>
+<li>语言域（language-specific domains）则包括地区、日期等</li>
+<li>参数域（ argument domain）有最高优先权</li>
+</ul>
+<p>注意需要在每次启动app并且没有在user defaules中读取数据的时候调用以上方法，因为registerDefaults:不能把这些默认数据存储到硬盘上，所以application:didFinishLaunchingWithOptions是最合适的地方。</p>
+<pre><code> NSURL *defaultPrefsFile = [[NSBundle mainBundle]
+URLForResource:@&quot;DefaultPreferences&quot; withExtension:@&quot;plist&quot;];
+NSDictionary *defaultPrefs = [NSDictionary dictionaryWithContentsOfURL:defaultPrefsFile];
+[[NSUserDefaults standardUserDefaults] registerDefaults:defaultPrefs];
+</code></pre><p>这样做的原因是：默认情况下，应用域是空的，没见键也没有值。当应用第一次设置某项用户偏好设置的值时，相应的值会通过指定的键加入应用域。当通过NSUserDefaults获取某项用户偏好设置的值时，NSUserDefaults会先在应用域中查找，如果找到了值，NSUserDefaults就会返回这个值。如果没有找到，NSUserDefaults就会在注册域中查找并返回默认值。<br>user defaults数据库中其实是由多个层级的域组成的，当你读取一个键值的数据时，NSUserDefaults从上到下透过域的层级寻找正确的值，不同的域有不同的功能，有些域是可持久的，有些域则不行。</p>
 
       
     </div>
@@ -425,6 +464,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/NSUserDefaults/" rel="tag"># NSUserDefaults</a>
+          
+        </div>
+      
 
       
         
@@ -434,8 +479,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/16/NSUser​Defaults/" rel="next" title="NSUserDefaults使用">
-                <i class="fa fa-chevron-left"></i> NSUserDefaults使用
+              <a href="/2016/02/16/OAuth 2.0/" rel="next" title="GCD概要及实现原理">
+                <i class="fa fa-chevron-left"></i> GCD概要及实现原理
               </a>
             
           </div>
@@ -443,6 +488,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/15/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -596,7 +645,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#NSUserDefaults官方文档"><span class="nav-number">1.</span> <span class="nav-text">NSUserDefaults官方文档</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NSUserDefaults"><span class="nav-number"></span> <span class="nav-text">NSUserDefaults</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tip-1：支持存储的类型"><span class="nav-number">1.</span> <span class="nav-text">Tip 1：支持存储的类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tip-2-存储使用方法"><span class="nav-number">2.</span> <span class="nav-text">Tip 2: 存储使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tip-3-获取存储的data"><span class="nav-number">3.</span> <span class="nav-text">Tip 3: 获取存储的data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tip-4-对于常见的值类型，如Bool，Float，Integer-等可以使用系统提供的一些方法来存储不同类型值。"><span class="nav-number">4.</span> <span class="nav-text">Tip 4: 对于常见的值类型，如Bool，Float，Integer 等可以使用系统提供的一些方法来存储不同类型值。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tip-5-NSUserDefaults域"><span class="nav-number">5.</span> <span class="nav-text">Tip 5: NSUserDefaults域</span></a></li></ol></div>
             
 
           </div>

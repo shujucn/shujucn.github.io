@@ -1,0 +1,916 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Neucha:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Sqlite," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/atomic.png?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Creat TableCREATE TABLE 语句用于在任何给定的数据库创建一个新表。创建基本表，涉及到命名表、定义列及每一列的数据类型  CREATE TABLE database_name.table_name( column1 datatype  PRIMARY KEY(one or more columns), ..... columnN datatype,); Delete table">
+<meta name="keywords" content="Sqlite">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sqlite常用语句">
+<meta property="og:url" content="http://yoursite.com/2014/07/16/Sqlite3 常用语句/index.html">
+<meta property="og:site_name" content="shujucn">
+<meta property="og:description" content="Creat TableCREATE TABLE 语句用于在任何给定的数据库创建一个新表。创建基本表，涉及到命名表、定义列及每一列的数据类型  CREATE TABLE database_name.table_name( column1 datatype  PRIMARY KEY(one or more columns), ..... columnN datatype,); Delete table">
+<meta property="og:updated_time" content="2017-05-16T10:27:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sqlite常用语句">
+<meta name="twitter:description" content="Creat TableCREATE TABLE 语句用于在任何给定的数据库创建一个新表。创建基本表，涉及到命名表、定义列及每一列的数据类型  CREATE TABLE database_name.table_name( column1 datatype  PRIMARY KEY(one or more columns), ..... columnN datatype,); Delete table">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2014/07/16/Sqlite3 常用语句/"/>
+
+
+
+
+
+  <title>Sqlite常用语句 | shujucn</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+      <div class="site-meta-headline">
+        <a>
+          <img class="custom-logo-image" src="/uploads/atomic.png"
+               alt="shujucn"/>
+        </a>
+      </div>
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">shujucn</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/07/16/Sqlite3 常用语句/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="shujucn">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/atomic.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="shujucn">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Sqlite常用语句</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-07-16T14:49:43+08:00">
+                2014-07-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Creat-Table"><a href="#Creat-Table" class="headerlink" title="Creat Table"></a>Creat Table</h2><p>CREATE TABLE 语句用于在任何给定的数据库创建一个新表。创建基本表，涉及到命名表、定义列及每一列的数据类型</p>
+<pre><code> CREATE TABLE database_name.table_name(
+column1 datatype  PRIMARY KEY(one or more columns),
+.....
+columnN datatype,);
+</code></pre><h2 id="Delete-table"><a href="#Delete-table" class="headerlink" title="Delete table"></a>Delete table</h2><p>DROP TABLE 语句用来删除表定义及其所有相关数据、索引、触发器、约束和该表的权限规范。一但一个表使用此命令被删除，表中所有信息也将永远丢失。</p>
+<pre><code>DROP TABLE database_name.table_name;
+</code></pre><h2 id="Insert"><a href="#Insert" class="headerlink" title="Insert"></a>Insert</h2><p>INSERT INTO 语句用于向数据库的某个表中添加新的数据行。<br>INSERT INTO 语句有两种基本语法，如下所示：</p>
+<ol>
+<li><code>INSERT INTO TABLE_NAME (column1, column2, column3,...columnN) VALUES (value1, value2, value3,...valueN);</code> column1为列名</li>
+<li><code>INSERT INTO TABLE_NAME VALUES (value1,value2,value3,...valueN);</code></li>
+</ol>
+<h2 id="SELCT"><a href="#SELCT" class="headerlink" title="SELCT"></a>SELCT</h2><p>SELECT 语句用于从 SQLite 数据库表中获取数据，以结果表的形式返回数据。<br>使用方法：</p>
+<pre><code>1  SELECT column1, column2, columnN FROM table_name;
+2 SELECT * FROM table_name;
+</code></pre><h2 id="SQLite-算术运算符"><a href="#SQLite-算术运算符" class="headerlink" title="SQLite 算术运算符"></a>SQLite 算术运算符</h2><p>假设变量 a=10，变量 b=20，则：<br>| 运算符 | 描述 | 实例 |<br>| :—— | :—— | :—— |<br>|+ |加法 - 把运算符两边的值相加 |    a + b 将得到 30|<br>|-    |减法 - 左操作数减去右操作数 |    a - b 将得到 -10|<br>|<em>    |乘法 - 把运算符两边的值相乘 |    a </em> b 将得到 200|<br>|/|    除法 - 左操作数除以右操作数     | b / a 将得到 2|<br>|%|    取模 - 左操作数除以右操作数后得到的余数|    b % a will give 0|</p>
+<h2 id="SQLite-表达式"><a href="#SQLite-表达式" class="headerlink" title="SQLite 表达式"></a>SQLite 表达式</h2><pre><code>SELECT column1, column2, columnN FROM table_name WHERE [CONTION | EXPRESSION];
+</code></pre><h2 id="WHERE"><a href="#WHERE" class="headerlink" title="WHERE"></a>WHERE</h2><p>WHERE 子句用于指定从一个表或多个表中获取数据的条件。如果满足给定的条件，即为真（true）时，则从表中返回特定的值。您可以使用WHERE子句来过滤记录，只获取需要的记录。WHERE子句不仅可用在SELECT语句中，它也可用在 UPDATE、DELETE 语句中</p>
+<pre><code>SELECT column1, column2, columnN 
+FROM table_name 
+WHERE [condition]
+</code></pre><h2 id="AND-OR"><a href="#AND-OR" class="headerlink" title="AND/OR"></a>AND/OR</h2><p>AND 和 OR 运算符用于编译多个条件来缩小在 SQLite 语句中所选的数据。</p>
+<ul>
+<li>AND 运算符允许在一个 SQL 语句的 WHERE 子句中的多个条件的存在。使用 AND 运算符时，只有当所有条件都为真（true）时，整个条件为真（true）。例如，只有当 condition1 和 condition2 都为真（true）时，[condition1] AND [condition2] 为真（true）</li>
+<li>OR 运算符也用于结合一个 SQL 语句的 WHERE 子句中的多个条件。使用 OR 运算符时，只要当条件中任何一个为真（true）时，整 个条件为真（true）。例如，只要当 condition1 或 condition2 有一个为真（true）时，[condition1] OR [condition2] 为真（true）。</li>
+</ul>
+<h2 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h2><p>UPDATE 查询用于修改表中已有的记录。可以使用带有 WHERE 子句的 UPDATE 查询来更新选定行，否则所有的行都会被更新。<br>带有 WHERE 子句的 UPDATE 查询的基本语法如下：</p>
+<pre><code>UPDATE table_name
+SET column1 = value1, column2 = value2...., columnN = valueN
+WHERE [condition];
+</code></pre><h2 id="Delete"><a href="#Delete" class="headerlink" title="Delete"></a>Delete</h2><p>DELETE 查询用于删除表中已有的记录。可以使用带有 WHERE 子句的 DELETE 查询来删除选定行，否则所有的记录都会被删除。下面的语句table所有记录都会被删除。</p>
+<pre><code>DELETE FROM table_name
+</code></pre><p>带有 WHERE 子句的 DELETE 查询的基本语法如下：</p>
+<pre><code>DELETE FROM table_name
+WHERE [condition];
+</code></pre><p>可以使用 AND 或 OR 运算符来结合 N 个数量的条件。</p>
+<h2 id="Like"><a href="#Like" class="headerlink" title="Like"></a>Like</h2><p> LIKE 运算符是用来匹配通配符指定模式的文本值。如果搜索表达式与模式表达式匹配，LIKE 运算符将返回真（true），也就是 1。这里有两个通配符与 LIKE 运算符一起使用：</p>
+<ul>
+<li>百分号 （%） </li>
+<li><p>下划线 （<em>）<br>百分号（%）代表零个、一个或多个数字或字符。下划线（</em>）代表一个单一的数字或字符。这些符号可以被组合使用。</p>
+<p> SELECT FROM table_name<br> WHERE column LIKE ‘XXXX%’</p>
+<p> or </p>
+<p> SELECT FROM table_name<br> WHERE column LIKE ‘%XXXX%’</p>
+<p> or</p>
+<p> SELECT FROM table<em>name<br> WHERE column LIKE ‘XXXX</em>‘</p>
+<p> or</p>
+<p> SELECT FROM table_name<br> WHERE column LIKE ‘_XXXX’</p>
+<p> or</p>
+<p> SELECT FROM table_name<br> WHERE column LIKE ‘<em>XXXX</em>‘</p>
+</li>
+</ul>
+<p>例如：<br>|语句|    描述|<br>| :——| :——|<br>|WHERE SALARY LIKE ‘200%’|    查找以 200 开头的任意值|<br>|WHERE SALARY LIKE ‘%200%’|    查找任意位置包含 200 的任意值|<br>|WHERE SALARY LIKE ‘<em>00%’|    查找第二位和第三位为 00 的任意值|<br>|WHERE SALARY LIKE ‘2</em>%_%’|    查找以 2 开头，且长度至少为 3 个字符的任意值|<br>|WHERE SALARY LIKE ‘%2’|    查找以 2 结尾的任意值|<br>|WHERE SALARY LIKE ‘_2%3’|    查找第二位为 2，且以 3 结尾的任意值|<br>|WHERE SALARY LIKE ‘2___3’|    查找长度为 5 位数，且以 2 开头以 3 结尾的任意值|</p>
+<h2 id="Glob"><a href="#Glob" class="headerlink" title="Glob"></a>Glob</h2><p>GLOB 运算符是用来匹配通配符指定模式的文本值。如果搜索表达式与模式表达式匹配，GLOB 运算符将返回真（true），也就是 1。与 LIKE 运算符不同的是，GLOB 是大小写敏感的，对于下面的通配符，它遵循 UNIX 的语法。</p>
+<ul>
+<li>星号 （*） </li>
+<li>问号 （?）</li>
+</ul>
+<p>星号（*）代表零个、一个或多个数字或字符。问号（?）代表一个单一的数字或字符。这些符号可以被组合使用。</p>
+<ul>
+<li><p>和 ? 的基本语法如下：</p>
+<p>  SELECT FROM table_name<br>  WHERE column GLOB ‘XXXX*’</p>
+<p>  or </p>
+<p>  SELECT FROM table_name<br>  WHERE column GLOB ‘<em>XXXX</em>‘</p>
+<p>  or</p>
+<p>  SELECT FROM table_name<br>  WHERE column GLOB ‘XXXX?’</p>
+<p>  or</p>
+<p>  SELECT FROM table_name<br>  WHERE column GLOB ‘?XXXX’</p>
+<p>  or</p>
+<p>  SELECT FROM table_name<br>  WHERE column GLOB ‘?XXXX?’</p>
+<p>  or</p>
+<p>  SELECT FROM table_name<br>  WHERE column GLOB ‘????’</p>
+</li>
+</ul>
+<p>您可以使用 AND 或 OR 运算符来结合 N 个数量的条件。在这里，XXXX 可以是任何数字或字符串值。<br>实例。<br>下面一些实例演示了 带有 ‘<em>‘ 和 ‘?’ 运算符的 GLOB 子句不同的地方：<br>|语句|    描述|<br>| :——| :——|<br>|WHERE SALARY GLOB ‘200</em>‘|    查找以 200 开头的任意值|<br>|WHERE SALARY GLOB ‘<em>200</em>‘|    查找任意位置包含 200 的任意值|<br>|WHERE SALARY GLOB ‘?00<em>‘|    查找第二位和第三位为 00 的任意值|<br>|WHERE SALARY GLOB ‘2??’|    查找以 2 开头，且长度至少为 3 个字符的任意值|<br>|WHERE SALARY GLOB ‘</em>2’|    查找以 2 结尾的任意值|<br>|WHERE SALARY GLOB ‘?2*3’|    查找第二位为 2，且以 3 结尾的任意值|<br>|WHERE SALARY GLOB ‘2???3’|    查找长度为 5 位数，且以 2 开头以 3 结尾的任意值|</p>
+<h2 id="LIMIT"><a href="#LIMIT" class="headerlink" title="LIMIT"></a>LIMIT</h2><p>LIMIT 子句用于限制由 SELECT 语句返回的数据数量</p>
+<pre><code>ELECT column1, column2, columnN 
+FROM table_name
+LIMIT [no of rows]
+</code></pre><h2 id="ORDER-BY"><a href="#ORDER-BY" class="headerlink" title="ORDER BY"></a>ORDER BY</h2><p>ORDER BY子句是用来基于一个或多个列按升序或降序顺序排列数据.</p>
+<pre><code>SELECT column-list 
+FROM table_name 
+[WHERE condition] 
+[ORDER BY column1, column2, .. columnN] [ASC | DESC];
+</code></pre><h2 id="GROUP-BY"><a href="#GROUP-BY" class="headerlink" title="GROUP BY"></a>GROUP BY</h2><p>GROUP BY 子句用于与 SELECT 语句一起使用，来对相同的数据进行分组。<br>在 SELECT 语句中，GROUP BY 子句放在 WHERE 子句之后，放在 ORDER BY 子句之前。</p>
+<pre><code>SELECT column-list
+FROM table_name
+WHERE [ conditions ]
+GROUP BY column1, column2....columnN
+ORDER BY column1, column2....columnN
+</code></pre><h2 id="HAVING"><a href="#HAVING" class="headerlink" title="HAVING"></a>HAVING</h2><p>HAVING 子句允许指定条件来过滤将出现在最终结果中的分组结果。<br>WHERE 子句在所选列上设置条件，而 HAVING 子句则在由 GROUP BY 子句创建的分组上设置条件。<br>下面是 HAVING 子句在 SELECT 查询中的位置：</p>
+<pre><code>SELECT
+FROM
+WHERE
+GROUP BY
+HAVING
+ORDER BY
+</code></pre><p>在一个查询中，HAVING 子句必须放在 GROUP BY 子句之后，必须放在 ORDER BY 子句之前。下面是包含 HAVING 子句的 SELECT 语句的语法：</p>
+<pre><code>SELECT column1, column2
+FROM table1, table2
+WHERE [ conditions ]
+GROUP BY column1, column2
+HAVING [ conditions ]
+ORDER BY column1, column2
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>🐶 您的支持将鼓励我继续创作 🐶</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechat-reward-img.jpg" alt="shujucn WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay-reward-img.jpg" alt="shujucn Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Sqlite/" rel="tag"># Sqlite</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/07/16/GCD概要及实现原理/" rel="prev" title="GCD概要及实现原理">
+                GCD概要及实现原理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/atomic.png"
+               alt="shujucn" />
+          <p class="site-author-name" itemprop="name">shujucn</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/shujucn" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/dongchencx" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="www.shujucn.tech" title="shujucn" target="_blank">shujucn</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Creat-Table"><span class="nav-number">1.</span> <span class="nav-text">Creat Table</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Delete-table"><span class="nav-number">2.</span> <span class="nav-text">Delete table</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Insert"><span class="nav-number">3.</span> <span class="nav-text">Insert</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SELCT"><span class="nav-number">4.</span> <span class="nav-text">SELCT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQLite-算术运算符"><span class="nav-number">5.</span> <span class="nav-text">SQLite 算术运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQLite-表达式"><span class="nav-number">6.</span> <span class="nav-text">SQLite 表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WHERE"><span class="nav-number">7.</span> <span class="nav-text">WHERE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AND-OR"><span class="nav-number">8.</span> <span class="nav-text">AND/OR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Update"><span class="nav-number">9.</span> <span class="nav-text">Update</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Delete"><span class="nav-number">10.</span> <span class="nav-text">Delete</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Like"><span class="nav-number">11.</span> <span class="nav-text">Like</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Glob"><span class="nav-number">12.</span> <span class="nav-text">Glob</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LIMIT"><span class="nav-number">13.</span> <span class="nav-text">LIMIT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ORDER-BY"><span class="nav-number">14.</span> <span class="nav-text">ORDER BY</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GROUP-BY"><span class="nav-number">15.</span> <span class="nav-text">GROUP BY</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HAVING"><span class="nav-number">16.</span> <span class="nav-text">HAVING</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">shujucn</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
