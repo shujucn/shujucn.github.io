@@ -98,7 +98,7 @@
 <meta name="keywords" content="Sqlite">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sqlite常用语句">
-<meta property="og:url" content="http://yoursite.com/2014/07/16/Sqlite3 常用语句/index.html">
+<meta property="og:url" content="http://shujucn.tech/2014/07/16/Sqlite3 常用语句/index.html">
 <meta property="og:site_name" content="shujucn">
 <meta property="og:description" content="Creat TableCREATE TABLE 语句用于在任何给定的数据库创建一个新表。创建基本表，涉及到命名表、定义列及每一列的数据类型  CREATE TABLE database_name.table_name( column1 datatype  PRIMARY KEY(one or more columns), ..... columnN datatype,); Delete table">
 <meta property="og:updated_time" content="2017-05-16T10:54:16.000Z">
@@ -132,7 +132,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2014/07/16/Sqlite3 常用语句/"/>
+  <link rel="canonical" href="http://shujucn.tech/2014/07/16/Sqlite3 常用语句/"/>
 
 
 
@@ -268,9 +268,47 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -295,12 +333,12 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/07/16/Sqlite3 常用语句/">
+    <link itemprop="mainEntityOfPage" href="http://shujucn.tech/2014/07/16/Sqlite3 常用语句/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="shujucn">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/atomic.png">
+      <meta itemprop="image" content="/images/atomic.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -615,7 +653,7 @@ ORDER BY column1, column2
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/uploads/atomic.png"
+               src="/images/atomic.png"
                alt="shujucn" />
           <p class="site-author-name" itemprop="name">shujucn</p>
            
@@ -894,6 +932,19 @@ ORDER BY column1, column2
   
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/vendors/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/vendors/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
 
 
 

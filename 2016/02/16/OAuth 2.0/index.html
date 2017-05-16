@@ -98,7 +98,7 @@
 <meta name="keywords" content="GCD">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GCD概要及实现原理">
-<meta property="og:url" content="http://yoursite.com/2016/02/16/OAuth 2.0/index.html">
+<meta property="og:url" content="http://shujucn.tech/2016/02/16/OAuth 2.0/index.html">
 <meta property="og:site_name" content="shujucn">
 <meta property="og:description" content="OAuth 2.0 学习笔记。主要参考资料为RFC 6749. OAuth协议 OAuth(开放授权)是一个开放标准。允许第三方网站在用户授权的前提下访问在用户在服务商那里存储的各种信息。而这种授权无需将用户提供用户名和密码提供给该第三方网站。 OAuth允许用户提供一个令牌给第三方网站，一个令牌对应一个特定的第三方网站，同时该令牌只能在特定的时间内访问特定的资源。  OAuth在”客户端”与”服">
 <meta property="og:updated_time" content="2017-05-16T10:55:57.000Z">
@@ -132,7 +132,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/02/16/OAuth 2.0/"/>
+  <link rel="canonical" href="http://shujucn.tech/2016/02/16/OAuth 2.0/"/>
 
 
 
@@ -268,9 +268,47 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -295,12 +333,12 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/16/OAuth 2.0/">
+    <link itemprop="mainEntityOfPage" href="http://shujucn.tech/2016/02/16/OAuth 2.0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="shujucn">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/atomic.png">
+      <meta itemprop="image" content="/images/atomic.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -558,7 +596,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/uploads/atomic.png"
+               src="/images/atomic.png"
                alt="shujucn" />
           <p class="site-author-name" itemprop="name">shujucn</p>
            
@@ -837,6 +875,19 @@
   
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/vendors/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/vendors/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
 
 
 

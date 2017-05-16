@@ -98,7 +98,7 @@
 <meta name="keywords" content="Block">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深入理解Block">
-<meta property="og:url" content="http://yoursite.com/2015/08/16/深入理解Block/index.html">
+<meta property="og:url" content="http://shujucn.tech/2015/08/16/深入理解Block/index.html">
 <meta property="og:site_name" content="shujucn">
 <meta property="og:description" content="Block 简介Mac OS X系统10.4及其iOS 4.0后引入了闭包的概念，这项语言特性是作为扩展而加入GCC编译器的。在Foundation框架中大量使用了Block。块就是一个实现某个功能的函数闭包，这个函数闭包可以带有参数，也可以没有参数，可以有返回值也可以没有返回值者，用符号’^’来表示。块在声明的范围内，可以调用块外部的全局变量和局部变量。 void (^someBlock) ()">
 <meta property="og:image" content="leanote://file/getImage?fileId=58df61f97720ac6951000001">
@@ -134,7 +134,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2015/08/16/深入理解Block/"/>
+  <link rel="canonical" href="http://shujucn.tech/2015/08/16/深入理解Block/"/>
 
 
 
@@ -270,9 +270,47 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -297,12 +335,12 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/08/16/深入理解Block/">
+    <link itemprop="mainEntityOfPage" href="http://shujucn.tech/2015/08/16/深入理解Block/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="shujucn">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/atomic.png">
+      <meta itemprop="image" content="/images/atomic.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -586,7 +624,7 @@ BLOCKSOME block = ^(bool flag, int value) {
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/uploads/atomic.png"
+               src="/images/atomic.png"
                alt="shujucn" />
           <p class="site-author-name" itemprop="name">shujucn</p>
            
@@ -865,6 +903,19 @@ BLOCKSOME block = ^(bool flag, int value) {
   
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/vendors/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/vendors/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
 
 
 

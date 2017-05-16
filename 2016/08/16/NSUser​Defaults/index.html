@@ -98,7 +98,7 @@
 <meta name="keywords" content="NSUserDefaults">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NSUserDefaults使用">
-<meta property="og:url" content="http://yoursite.com/2016/08/16/NSUser​Defaults/index.html">
+<meta property="og:url" content="http://shujucn.tech/2016/08/16/NSUser​Defaults/index.html">
 <meta property="og:site_name" content="shujucn">
 <meta property="og:description" content="NSUserDefaults官方文档NSUserDefaultsNSUserDefaults 是iOS Foundation 框架提供的一种用于存储管理单例。 Tip 1：支持存储的类型 NSArray NSData NSDictionary NSNumber NSString  通过NSData可以存储大部分类型的文件，例如要存储一张图片可以先把图片转为NSData。 // Create ins">
 <meta property="og:updated_time" content="2017-05-16T10:55:46.000Z">
@@ -132,7 +132,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/08/16/NSUser​Defaults/"/>
+  <link rel="canonical" href="http://shujucn.tech/2016/08/16/NSUser​Defaults/"/>
 
 
 
@@ -268,9 +268,47 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -295,12 +333,12 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/16/NSUser​Defaults/">
+    <link itemprop="mainEntityOfPage" href="http://shujucn.tech/2016/08/16/NSUser​Defaults/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="shujucn">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/atomic.png">
+      <meta itemprop="image" content="/images/atomic.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -559,7 +597,7 @@ NSDictionary *defaultPrefs = [NSDictionary dictionaryWithContentsOfURL:defaultPr
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/uploads/atomic.png"
+               src="/images/atomic.png"
                alt="shujucn" />
           <p class="site-author-name" itemprop="name">shujucn</p>
            
@@ -838,6 +876,19 @@ NSDictionary *defaultPrefs = [NSDictionary dictionaryWithContentsOfURL:defaultPr
   
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/vendors/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/vendors/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
 
 
 
